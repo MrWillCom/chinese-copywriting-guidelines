@@ -1,14 +1,21 @@
-# 中文文案排版指北
+# 中文文案排版指北（a26e2ce6+）
 
 统一中文文案、排版的相关用法，降低团队成员之间的沟通成本，增强网站气质。
 
-Other languages:
+## “a26e2ce6+”
 
-- [英语](README.en.md)
-- [繁体中文](README.md)
-- [简体中文](README.zh-Hans.md)
+本项目是 [sparanoid/chinese-copywriting-guidelines](https://github.com/sparanoid/chinese-copywriting-guidelines) 的衍生版本。因为这一衍生版本是从提交 `a26e2ce6` 开始分叉的，所以命名为“a26e2ce6+”。
 
-* * *
+这一衍生版本移除了除简体中文外的语言版本，旨在方便个人维护。此外，还移除了“工具”、“谁在这样做？”和“Forks”章节，以免由于内容更新而产生潜在的误导。用于静态网页部署或持续集成、部署的文件亦已被移除。
+
+这一衍生版本不会释出版本，若需要指代版本，请使用 Git 提交哈希值。
+
+| 标记   | 用法           |
+| ---- | ------------ |
+| 正确   | 请这样做         |
+| 可以接受 | 这样做问题不大      |
+| 不推荐  | 没有必要的话，不要这样做 |
+| 错误   | 禁止这样做        |
 
 ## 空格
 
@@ -88,9 +95,9 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 
 ## 标点符号
 
-### 不重复使用标点符号
+### 谨慎重复使用标点符号
 
-虽然中国大陆的标点符号用法允许重复使用标点符号，但是这么做会破坏句子的美观性。
+如果没有必要，则不重复使用标点符号；如果有必要，也不应该重复过多次数。
 
 正确：
 
@@ -98,19 +105,35 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 >
 > 她竟然对你说「喵」？！
 
-错误：
+可以接受：
 
-> 德国队竟然战胜了巴西队！！
->
-> 德国队竟然战胜了巴西队！！！！！！！！
+> 德国队竟然战胜了巴西队！！！
 >
 > 她竟然对你说「喵」？？！！
+
+不推荐：
+
+> 德国队竟然战胜了巴西队！！！！！！！！
 >
 > 她竟然对你说「喵」？！？！？？！！
 
 ## 全角和半角
 
 不明白什么是全角（全形）与半角（半形）符号？请查看维基百科条目『[全角和半角](https://zh.wikipedia.org/wiki/%E5%85%A8%E5%BD%A2%E5%92%8C%E5%8D%8A%E5%BD%A2)』。
+
+### 语境原则
+
+决定使用全角还是半角符号的因素，是所处的语境。在中文语境中，应使用全角符号、中文标点；在英文语境中，应使用半角符号、英文标点。
+
+有时，中文语境中可能包含英文语境，反之亦然，但仍应用相应的标点符号区分清楚。例如：
+
+> 核磁共振成像（NMRI）是什么原理都不知道？
+
+“核磁共振成像（”和“）是什么原理都不知道？”处于中文语境，而“NMRI”处于英文语境。
+
+> 推荐你阅读《Hackers & Painters: Big Ideas from the Computer Age》，非常有趣。
+
+“推荐你阅读《”和“》，非常有趣。”处于中文语境，而“Hackers & Painters: Big Ideas from the Computer Age”处于英文语境。
 
 ### 使用全角中文标点
 
@@ -130,7 +153,17 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 >
 > 核磁共振成像(NMRI)是什么原理都不知道?JFGI!
 
-例外：中文句子内夹有英文书籍名、报刊名时，不应借用中文书名号，应以英文斜体表示。
+### 在中文句子中使用中文书名号
+
+中文句子内夹有英文书籍名、报刊名时，仍应使用中文书名号，而非英文斜体，这是基于[语境原则](#语境原则)的。
+
+正确：
+
+> 推荐你阅读《Hackers & Painters: Big Ideas from the Computer Age》，非常有趣。
+
+错误：
+
+> 推荐你阅读 *Hackers & Painters: Big Ideas from the Computer Age*，非常有趣。
 
 ### 数字使用半角字符
 
@@ -142,7 +175,7 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 
 > 这个蛋糕只卖 １０００ 元。
 
-例外：在设计稿、宣传海报中如出现极少量数字的情形时，为方便文字对齐，是可以使用全角数字的。
+如果确实有对齐数字的必要，则应使用等宽字体。
 
 ### 遇到完整的英文整句、特殊名词，其内容使用半角标点
 
@@ -150,7 +183,7 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 
 > 乔布斯那句话是怎么说的？「Stay hungry, stay foolish.」
 >
-> 推荐你阅读 *Hackers & Painters: Big Ideas from the Computer Age*，非常地有趣。
+> 推荐你阅读《Hackers & Painters: Big Ideas from the Computer Age》，非常地有趣。
 
 错误：
 
@@ -200,82 +233,69 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 
 > 我们需要一位熟悉 TypeScript、HTML5，至少理解一种框架（如 React、Next.js）的前端开发者。
 
+可以接受：
+
+> 我们需要一位熟悉 TS、H5，至少理解一种框架（如 React、Next.js）的前端开发者。
+
 错误：
 
 > 我们需要一位熟悉 Ts、h5，至少理解一种框架（如 RJS、nextjs）的 FED。
 
-## 争议
+## 链接
 
-以下用法略带有个人色彩，即：无论是否遵循下述规则，从语法的角度来讲都是**正确**的。
+### 链接与其它文本之间不加空格
 
-### 链接之间增加空格
+正确：
 
-用法：
+> 请[提交一个 issue](#) 并分配给相关同事。
+>
+> 访问我们网站的最新动态，请[点击这里](#)进行订阅！
+
+错误：
 
 > 请 [提交一个 issue](#) 并分配给相关同事。
 >
 > 访问我们网站的最新动态，请 [点击这里](#) 进行订阅！
 
-对比用法：
+## 引号
 
-> 请[提交一个 issue](#)并分配给相关同事。
->
-> 访问我们网站的最新动态，请[点击这里](#)进行订阅！
+### 简体中文不使用直角引号
 
-### 简体中文使用直角引号
-
-用法：
-
-> 「老师，『有条不紊』的『紊』是什么意思？」
-
-对比用法：
+正确：
 
 > “老师，‘有条不紊’的‘紊’是什么意思？”
 
-## 工具
+不推荐：
 
-仓库 | 系列 | 语言
---- | ---- | ---
-[pangu.js](https://github.com/vinta/pangu.js) | pangu | JavaScript
-[pangu-go](https://github.com/vinta/pangu) | pangu | Go
-[pangu.java](https://github.com/vinta/pangu.java) | pangu | Java
-[pangu.py](https://github.com/vinta/pangu.py) | pangu | Python
-[pangu.rb](https://github.com/dlackty/pangu.rb) | pangu | Ruby
-[pangu.php](https://github.com/cchlorine/pangu.php) | pangu | PHP
-[pangu.vim](https://github.com/hotoo/pangu.vim) | pangu | Vim
-[vue-pangu](https://github.com/serkodev/vue-pangu) | pangu | Vue.js (Web Converter)
-[intellij-pangu](https://plugins.jetbrains.com/plugin/19665-pangu) | pangu | Intellij Platform Plugin
-[autocorrect](https://github.com/huacnlee/autocorrect) | autocorrect | Rust, WASM, CLI tool
-[autocorrect-node](https://github.com/huacnlee/autocorrect/tree/main/autocorrect-node) | autocorrect | Node.js
-[autocorrect-py](https://github.com/huacnlee/autocorrect/tree/main/autocorrect-py) | autocorrect | Python
-[autocorrect-rb](https://github.com/huacnlee/autocorrect/tree/main/autocorrect-rb) | autocorrect | Ruby
-[autocorrect-java](https://github.com/huacnlee/autocorrect/tree/main/autocorrect-java) | autocorrect | Java
-[autocorrect-go](https://github.com/longbridgeapp/autocorrect) | autocorrect | Go
-[autocorrect-php](https://github.com/NauxLiu/auto-correct) | autocorrect | PHP
-[autocorrect-vscode](https://marketplace.visualstudio.com/items?itemName=huacnlee.autocorrect) | autocorrect | VS Code Extension
-[autocorrect-idea-plugin](https://plugins.jetbrains.com/plugin/20244-autocorrect) | autocorrect | Intellij Platform Plugin
-[jxlwqq/chinese-typesetting](https://github.com/jxlwqq/chinese-typesetting) | other | PHP
-[sparanoid/space-lover](https://github.com/sparanoid/space-lover) | other | PHP (WordPress)
-[sparanoid/grunt-auto-spacing](https://github.com/sparanoid/grunt-auto-spacing) | other | Node.js (Grunt)
-[hjiang/scripts/add-space-between-latin-and-cjk](https://github.com/hjiang/scripts/blob/master/add-space-between-latin-and-cjk) | other | Python
-[hustcc/hint](https://github.com/hustcc/hint) | other | Python
-[n0vad3v/Tekorrect](https://github.com/n0vad3v/Tekorrect) | other | Python
+> 「老师，『有条不紊』的『紊』是什么意思？」
 
-## 谁在这样做？
+## 用词
 
-网站 | 文案 | UGC
---- | --- | ---
-[Apple 中国](https://www.apple.com/cn/) | 是 | N/A
-[Apple 香港](https://www.apple.com/hk/) | 是 | N/A
-[Apple 台湾](https://www.apple.com/tw/) | 是 | N/A
-[Microsoft 中国](https://www.microsoft.com/zh-cn/) | 是 | N/A
-[Microsoft 香港](https://www.microsoft.com/zh-hk/) | 是 | N/A
-[Microsoft 台湾](https://www.microsoft.com/zh-tw/) | 是 | N/A
-[LeanCloud](https://leancloud.cn/) | 是 | N/A
-[V2EX](https://www.v2ex.com/) | 是 | 是
-[Apple4us](https://apple4us.com/) | 是 | N/A
-[Ruby China](https://ruby-china.org/) | 是 | 是
-[少数派](https://sspai.com/) | 是 | N/A
+### “其他”、“其她”、“其它”
+
+根据指代内容，选择相应正确的“其他”、“其她”、“其它”。
+
+正确：
+
+> 除了 iPhone，Apple 还有很多其它产品。
+
+错误：
+
+> 除了 iPhone，Apple 还有很多其他产品。
+>
+> 除了 iPhone，Apple 还有很多其她产品。
+
+### 不要翻译没有中文译名的名字
+
+正确：
+
+> 我们明天去 Apple Store 买 MacBook 吧！
+
+错误：
+
+> 我们明天去苹果店买苹果笔记本吧！
+>
+> 我们明天去 Apple 店买迈克本吧！
 
 ## 参考文献
 
@@ -288,9 +308,3 @@ CSS Text Module Level 4 的 [`text-spacing`](https://www.w3.org/TR/css-text-4/#t
 - [全形和半形 - 维基百科](https://zh.wikipedia.org/wiki/%E5%85%A8%E5%BD%A2%E5%92%8C%E5%8D%8A%E5%BD%A2)
 - [引号 - 维基百科](https://zh.wikipedia.org/wiki/%E5%BC%95%E8%99%9F)
 - [疑问惊叹号 - 维基百科](https://zh.wikipedia.org/wiki/%E7%96%91%E5%95%8F%E9%A9%9A%E5%98%86%E8%99%9F)
-
-## Forks
-
-衍生项目的用法可能与本项目存在差异。
-
-- [mzlogin/chinese-copywriting-guidelines](https://github.com/mzlogin/chinese-copywriting-guidelines)
